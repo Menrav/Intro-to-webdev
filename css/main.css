@@ -17,13 +17,27 @@ body {
   min-height: 50px;
 }
 
+.contact-us-container {
+  background-color: forestgreen;
+  min-height: 50px;
+}
+
+.image-display {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+
+/* Media Query Area */
+
 @media screen and (min-width: 768px) {
   .page-header {
     display: flex;
   }
 
   .header-logo-container,
-  .main-navigation-container {
+  .main-navigation-container,
+  .contact-us-container {
     min-height: initial;
   }
 
@@ -33,5 +47,17 @@ body {
 
   .main-navigation-container {
     flex: 1 0 400px;
+  }
+
+  .contact-us-container {
+    flex: 0 0 300px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .image-display {
+    visibility: visible;
+    width: 100%;
+    height: auto;
   }
 }
