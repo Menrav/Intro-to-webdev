@@ -41,13 +41,6 @@ body {
   padding: 12px;
   text-decoration: none;
 }
-.main-navigation a:hover,
-.main-navigation a:focus {
-  background: white;
-  border: thick double black;
-  color: rgb(0, 0, 255);
-  transition: 0.1s;
-}
 
 .header-search {
   background-color: #e5ebee;
@@ -112,5 +105,13 @@ h1 {
     flex: 0 1 300px;
     height: 300px;
     width: auto;
+  }
+
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    background: white;
+    border: thick double black;
+    color: rgb(0, 0, 255);
+    transition: 0.1s;
   }
 }
