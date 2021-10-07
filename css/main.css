@@ -28,23 +28,18 @@ body {
 
 .wolletjies-links {
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  justify-content: space-around;
+  margin: 0px;
+  padding: 0px;
+  height: 300px;
+  width: auto;
 }
 
 .main-navigation a {
-  color: #212121;
+  color: black;
   display: block;
   padding: 12px;
   text-decoration: none;
-}
-.main-navigation a:hover,
-.main-navigation a:focus {
-  background: white;
-  border: thick double black;
-  color: rgb(0, 0, 255);
-  transition: 0.1s;
 }
 
 .header-search {
@@ -104,5 +99,19 @@ h1 {
 
   .header-search {
     flex: 0 1 300px;
+  }
+
+  .wolletjies-links {
+    flex: 0 1 300px;
+    height: 300px;
+    width: auto;
+  }
+
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    background: white;
+    border: thick double black;
+    color: rgb(0, 0, 255);
+    transition: 0.1s;
   }
 }
