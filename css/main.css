@@ -7,6 +7,7 @@ body {
 .page-header {
   background: url("../assets/images/Banner.jpg") center 45%;
   min-height: 50px;
+  display: flex;
 }
 
 .header-logo-container {
@@ -24,15 +25,6 @@ body {
   margin: 0;
   outline: black;
   padding: 0;
-}
-
-.wolletjies-links {
-  display: flex;
-  justify-content: space-around;
-  margin: 0px;
-  padding: 0px;
-  height: 300px;
-  width: auto;
 }
 
 .main-navigation a {
@@ -68,13 +60,31 @@ h1 {
   text-align: center;
 }
 
+.main-page-wolletjies-gallery {
+  display: flex;
+  min-width: 9rem;
+  padding: 2rem;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.main-page-wolletjies-gallery img {
+  max-width: 100%;
+}
+.main-page-wolletjies-gallery li {
+  flex: 0 1 350px;
+}
+
 /* Media Query Area */
 
 @media screen and (min-width: 768px) {
   .page-header {
     align-items: center;
-    display: flex;
   }
+
   .header-logo-container,
   .main-navigation-container,
   .header-search {
@@ -101,16 +111,14 @@ h1 {
     flex: 0 1 300px;
   }
 
-  .wolletjies-links {
-    flex: 0 1 300px;
-    width: auto;
-  }
-
   .main-navigation a:hover,
   .main-navigation a:focus {
     background: white;
     border: thick double black;
     color: rgb(0, 0, 255);
-    transition: 0.1s;
+  }
+
+  .main-page-wolletjies-gallery {
+    gap: 6rem;
   }
 }
