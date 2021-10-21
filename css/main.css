@@ -18,12 +18,18 @@ a {
 .page-header {
   background: url("../assets/images/Banner.jpg") center 45%;
   min-height: 50px;
+  display: flex;
 }
 
 .header-logo-container {
   background: transparent url("../assets/images/PNG-Logo.png") center center
     no-repeat;
   background-size: contain;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 400px;
+  height: 100px;
+  width: initial;
 }
 
 .main-navigation {
@@ -33,15 +39,6 @@ a {
   margin: 0;
   outline: black;
   padding: 0;
-}
-
-.wolletjies-links {
-  display: flex;
-  justify-content: space-around;
-  margin: 0px;
-  padding: 0px;
-  height: 300px;
-  width: auto;
 }
 
 .main-navigation a {
@@ -76,30 +73,58 @@ a {
 h1 {
   text-align: center;
 }
+.main-content-container {
+  display: flex;
+}
 
-.sidebar-left,
+.footer,
 .sidebar-right,
-.main-content,
-.footer {
+.main-content {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 
+.sidebar-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row;
+  border: solid black 1px;
+  width: 5rem;
+}
+
 .sidebar-right {
   border: solid black 1px;
-}
-.sidebar-left {
-  border: solid black 1px;
+  width: 5rem;
+  flex: 0 1 auto;
 }
 
 .main-content {
   border: solid black 1px;
+  min-height: 25rem;
+  width: 100%;
 }
 
 .footer {
   border: solid black 1px;
   height: 3rem;
+
+.main-page-wolletjies-gallery {
+  display: flex;
+  min-width: 9rem;
+  padding: 2rem;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.main-page-wolletjies-gallery img {
+  max-width: 100%;
+}
+.main-page-wolletjies-gallery li {
+  flex: 0 1 350px;
 }
 
 /* Media Query Area */
@@ -115,8 +140,8 @@ h1 {
 @media screen and (min-width: 768px) {
   .page-header {
     align-items: center;
-    display: flex;
   }
+
   .header-logo-container,
   .main-navigation-container,
   .header-search {
@@ -167,31 +192,31 @@ h1 {
 
   .sidebar-right {
     border: solid black 1px;
-    width: 15%;
-    flex-shrink: 0;
+    width: 10rem;
   }
   .sidebar-left {
     border: solid black 1px;
     width: 10rem;
-    flex-shrink: 0;
   }
 
   .main-content {
     border: solid black 1px;
     width: 70%;
-
-    flex: 1 1 auto;
   }
 
   .footer {
     border: solid black 1px;
     height: 3rem;
   }
-
+  
   .main-navigation a:hover,
   .main-navigation a:focus {
     background: white;
     border: thick double black;
     color: rgb(0, 0, 255);
+  }
+
+  .main-page-wolletjies-gallery {
+    gap: 6rem;
   }
 }
